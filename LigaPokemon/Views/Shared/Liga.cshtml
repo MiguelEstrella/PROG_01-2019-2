@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;    
+    }
+
+    nav ul{
+        padding: 0px;
+        list-style: none;
+        display: flex;
+        background-color: pink;
+        justify-content: center;
+    }
+    nav a{
+        padding: 8px;
+        text-decoration: none;
+        background-color: skyblue;
+        display: block;
+    }
+    </style>
+    <header>
+        <img src="http://pm1.narvii.com/6472/c512c3e9e749cd3df894034eafa921feca09f968_hq.jpg">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="~/home/Index">Pagina Principal</a></li>
+            <li><a href="~/home/Formulario">Inscripcion</a></li>
+        </ul>
+    </nav>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>Miguel Angel Estrella Santillán</footer>
+</body>
+</html>

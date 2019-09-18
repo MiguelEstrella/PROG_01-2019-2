@@ -1,0 +1,27 @@
+@model LigaPokemon.Models.Entrenador
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liga Pokemon</title>
+    <link>
+</head>
+<body>
+    <h1>Bienvenido a la liga Pokemon</h1>
+    <div asp-validation-summary="All">
+    <form asp-action="Formulario">
+        <label>Nombre</label>  
+        <input type="text" asp-for="nombre"/><br/>
+        <label>Pueblo de Origen</label>
+        <input type="text" asp-for="pueblo"/><br/>
+        <label>Cantidad de medallas</label>
+        <input type="number" min="0" asp-for="medallas"/>
+        <br/>
+        <input type="submit" value="registrar"/>
+    </form>
+    </div>
+
+</body>
+</html>
