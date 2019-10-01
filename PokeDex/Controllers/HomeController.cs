@@ -18,7 +18,20 @@ namespace PokeDex.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var lista= _context.Pokemones.ToList();
+            return View(lista);
+        }
+
+        [HttpPost]
+        public IActionResult Registro(Pokemon p){
+            if(ModelState.IsValid){
+                _context.Add(p);
+                _context.SaveChanges();
+
+                return RedirectToAction("Index");
+            }else{
+                return View(p);
+            }
         }
 
         public IActionResult About()
