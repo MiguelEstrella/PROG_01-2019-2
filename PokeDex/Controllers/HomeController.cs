@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using PokeDex.Models;
 
+
 namespace PokeDex.Controllers
 {
     public class HomeController : Controller
     {
+
+        private PokemonDbContext _context;
+        public HomeController (PokemonDbContext c){
+            _context=c;
+        }
         public IActionResult Index()
         {
             return View();
@@ -39,5 +45,7 @@ namespace PokeDex.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        
     }
 }
