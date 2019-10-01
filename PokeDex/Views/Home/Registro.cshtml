@@ -2,12 +2,14 @@
 
 <h1>Registro Pokemon</h1>
 
-<form method="post" asp-action="registro">
-    <div>
-        Nombre: <input asp-for="Nombre"/>
-    </div>
-    <div>
-        Foto: <input asp-for="Foto"/>
-    </div>
-    
+<form method="post" asp-action="Registro">
+    <div asp-validation-summary="All">
+        <div>
+            Nombre: <input asp-for="Nombre"/>
+        </div>
+        <div>
+            Foto: <input asp-for="Foto"/>
+        </div>
+        <button>Registrar</button>
+   </div>
 </form>

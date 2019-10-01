@@ -8,7 +8,7 @@ namespace PokeDex.Models
 
         [Required]
         public string Nombre {get; set;}
-
+        [Required]
         public string Foto {get; set;}
     }
 }

@@ -22,6 +22,11 @@ namespace PokeDex.Controllers
             return View(lista);
         }
 
+        public IActionResult Registro()
+        {
+            return View();
+        }
+
         [HttpPost]
         public IActionResult Registro(Pokemon p){
             if(ModelState.IsValid){
