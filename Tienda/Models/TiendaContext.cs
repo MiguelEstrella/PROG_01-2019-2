@@ -6,8 +6,9 @@ namespace Tienda.Models
             public DbSet<Producto> Productos {get;set;}
 
             public DbSet<Categoria> Categorias {get;set;}
-
-            public TiendaContext (DbContextOptions<TiendaContext> o) : base (o){
+ 
+            public TiendaContext (DbContextOptions<TiendaContext> o) : base (o)
+            {
 
             }
         }
