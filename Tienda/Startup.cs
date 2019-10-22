@@ -35,10 +35,11 @@ namespace Tienda
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddDbContext<TiendaContext>(o => o.UseNpgsql("Host=ec2-50-19-222-129.compute-1.amazonaws.com;"+
+            services.AddDbContext<TiendaContext>(o => o.UseNpgsql("Server=ec2-50-19-222-129.compute-1.amazonaws.com;"+
                                                                 "Username=gisoimigvomsux;"+
                                                                 "Password=8403f81c88ec99ec9f62039c8b90cc16f076a58f96fa7dbad77ad5a77ea4c2dc;"+
                                                                 "Port=5432;"+
+                                                                "Database=d1asu47csavlir;"+
                                                                 "SSL Mode=Require;"+
                                                                 "Trust Server Certificate = true"));
         }
